@@ -2,7 +2,7 @@
 using namespace std;
 
 void hello(); // プロトタイプ宣言（こんな感じの関数があるよというのを宣言している。mainよりも下にhelloを定義しても大丈夫。こっちの方がぱっと見で見やすいので🙆）
-void nibai();
+void nibai(int x);
 
 int main() {
     hello();
@@ -16,7 +16,7 @@ void nibai(int x){
 }
 void hello()
 {
-    cout << "Hello World!";
+    cout << "Hello World!\n";
     // voidの場合は、戻り値はない。
     // 戻り値とは、関数が計算して出す戻り値のことね。
 }
