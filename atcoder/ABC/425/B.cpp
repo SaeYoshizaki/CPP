@@ -18,7 +18,7 @@ int main()
     {
         if (A[j] != -1)
         {
-            if (std::find(A.begin(), A.end() - (N-j), A[j]) != result.end())
+            if (std::find(A.begin(), A.begin() + j, A[j]) != A.begin() + j)
             {
                 cout << "No";
                 return 0;
@@ -34,21 +34,14 @@ int main()
         }
     }
 
-    for (const auto &number : B)
+    for (int k = 0; k < N; k++)
     {
-        std::cout << number << ' ';
-    }
-    cout << "\n";
-
-    for (int k = 0; k > N; k ++){
-        if (A[k] == -1){
-            cout << k;
+        if (A[k] == -1)
+        {
             A[k] = B[cnt];
-            cnt ++;
+            cnt++;
         }
     }
-
-
 
     cout << "Yes" << endl;
     for (const auto &number : A)
