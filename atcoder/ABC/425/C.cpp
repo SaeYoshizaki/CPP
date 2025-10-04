@@ -36,17 +36,11 @@ int main()
             int r = (cnt + R) % N;
             if (r >= l)
             {
-                // cout << "⭐️\n";
-                // cout << "l:" << *(A.begin() + l - 1) << "\n";
-                // cout << "r:" << *(A.begin() + r - 1) << "\n";
                 result = accumulate(A.begin() + l, A.begin() + r + 1, 0LL);
                 cout << result << endl;
             }
             else
             {
-                // cout << "❤️\n";
-                // cout << "l:" << *(A.begin()) << "\n";
-                // cout << "r:" << *(A.begin() + r) << "\n";
                 result = accumulate(A.begin(), A.begin() + r + 1, 0LL) + accumulate(A.begin() + l, A.end(), 0LL);
                 cout << result << endl;
             }
